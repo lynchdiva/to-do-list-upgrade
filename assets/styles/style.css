@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --box-shadow: 8px 5px 5px rgba(127, 115, 115, 0.3);
+  --main-color: rgb(115, 113, 118);
+  --main-bg-color: rgb(169, 127, 208);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--main-color);
+
+  background-color: rgb(229, 233, 252);
+}
+
+.to-do {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.to-do__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+
+  color: white;
+
+  background-color: var(--main-bg-color);
+  box-shadow: var(--box-shadow);
+}
+
+.to-do__label {
+  font-size: 0;
+}
+
+.to-do__input {
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+
+  color: var(--main-color);
+
+  border: none;
+  box-shadow: var(--box-shadow);
+}
+
+.to-do__input:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: var(--main-bg-color);
+}
+
+.to-do__button {
+  display: block;
+  width: 130px;
+  height: 40px;
+  margin: 12px auto 0;
+  padding: 10px;
+
+  color: white;
+
+  background-color: var(--main-bg-color);
+  border-radius: 50px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.to-do__button:active {
+  transform: scale(1.02);
+}
+
+.to-do__list {
+  width: 100%;
+  min-height: 300px;
+  margin: 20px auto;
+  padding: 40px 50px;
+
+  background-color: white;
+  box-shadow: var(--box-shadow);
+}
+
+.to-do__task {
+  display: flex;
+  min-width: 0;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--main-color);
+  line-height: 120%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  cursor: pointer;
+}
+
+.to-do__task:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.to-do__task_complited {
+  text-decoration: line-through;
+}
+
+.to-do__bin {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 455px) {
+  .to-do__input {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .to-do__list {
+    width: 90%;
+    min-height: 250px;
+    padding: 25px 25px;
+  }
+}

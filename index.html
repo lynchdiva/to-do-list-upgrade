@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/normalize.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <title>To do list</title>
+  </head>
+  <body>
+    <main>
+      <article class="to-do">
+        <h1 class="to-do__title">ToDo List</h1>
+
+        <label class="to-do__label" for="new-task">Введите задачу</label>
+        <input
+          class="to-do__input"
+          id="new-task"
+          name="new-task"
+          type="text"
+          placeholder="Введите задачу"
+          autofocus
+        />
+        <button class="to-do__button">+ Добавить</button>
+
+        <ul class="to-do__list"></ul>
+      </article>
+    </main>
+    <script src="./assets/scripts/index.js"></script>
+  </body>
+</html>
