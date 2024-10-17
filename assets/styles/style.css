@@ -17,6 +17,7 @@ body {
   min-height: 100%;
 
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
   color: var(--main-color);
 
   background-color: rgb(229, 233, 252);
@@ -63,11 +64,13 @@ body {
 }
 
 .to-do__button {
-  display: block;
-  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
   height: 40px;
   margin: 12px auto 0;
-  padding: 10px;
+  padding-block: 25px;
 
   color: white;
 
@@ -78,18 +81,45 @@ body {
   cursor: pointer;
 }
 
-.to-do__button:active {
+.to-do__button_big {
+  width: 200px;
+}
+
+.to-do__button:not([disabled]):active {
   transform: scale(1.02);
+}
+
+.to-do__button:disabled {
+  background-color: rgb(140, 140, 157);
+
+  opacity: 0.5;
+}
+
+.to-do__list-container {
+  display: flex;
+  width: 100%;
+  min-height: 300px;
+  margin: 20px auto;
+
+  background-color: white;
+  box-shadow: var(--box-shadow);
+}
+
+.to-do__no-tasks {
+  align-self: center;
+  margin: auto;
+
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+
+  opacity: 0.5;
 }
 
 .to-do__list {
   width: 100%;
-  min-height: 300px;
-  margin: 20px auto;
-  padding: 40px 50px;
-
-  background-color: white;
-  box-shadow: var(--box-shadow);
+  margin: 0;
+  padding: 20px 40px;
 }
 
 .to-do__task {
@@ -110,14 +140,44 @@ body {
   margin-bottom: 14px;
 }
 
-.to-do__task_complited {
-  text-decoration: line-through;
+.to-do__done-label {
+  position: relative;
+  display: flex;
 }
 
-.to-do__bin {
-  width: 18px;
-  height: 18px;
-  margin-left: 10px;
+.to-do__done-input {
+  width: 30px;
+  height: 30px;
+
+  opacity: 0;
+}
+
+.to-do__done-input + .to-do__done-custom-input::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+
+  background-image: url(../icons/not-done.svg);
+  background-size: contain;
+  cursor: pointer;
+
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+
+.to-do__done-input:checked + .to-do__done-custom-input::before {
+  background-image: url(../icons/done.svg);
+}
+
+.to-do__done-input:hover + .to-do__done-custom-input::before {
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
 }
 
 @media screen and (max-width: 455px) {

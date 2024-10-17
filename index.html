@@ -23,9 +23,20 @@
         />
         <button class="to-do__button">+ Добавить</button>
 
-        <ul class="to-do__list"></ul>
+        <div class="to-do__list-container">
+          <p class="to-do__no-tasks">Нет задач</p>
+          <ul class="to-do__list hidden"></ul>
+        </div>
+
+        <button
+          class="to-do__button to-do__button_big"
+          id="clear-list"
+          disabled
+        >
+          Очистить список
+        </button>
       </article>
     </main>
-    <script src="./assets/scripts/index.js"></script>
+    <script src="./assets/scripts/script.js"></script>
   </body>
 </html>
