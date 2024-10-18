@@ -153,19 +153,7 @@ body {
 
   opacity: 0;
   background-color: transparent;
-  outline: none;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.to-do__done-input:focus,
-.to-do__done-input:active {
-  outline: none;
-  box-shadow: none;
-  background-color: transparent;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .to-do__done-input + .to-do__done-custom-input::before {
@@ -178,19 +166,35 @@ body {
   height: 30px;
 
   background-image: url(../icons/not-done.svg);
-  background-color: transparent;
   background-size: contain;
   cursor: pointer;
 
   transition-duration: all 0s;
 }
 
-.to-do__done-input:checked + .to-do__done-custom-input::before {
-  background-color: transparent;
+.to-do__done-input + .to-do__done-custom-input::after {
+  display: none;
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+
   background-image: url(../icons/done.svg);
+  background-size: contain;
+  cursor: pointer;
+
+  transition-duration: all 0s;
 }
 
-.to-do__done-input:hover + .to-do__done-custom-input::before {
+.to-do__done-input:checked + .to-do__done-custom-input::after {
+  display: block;
+}
+
+.to-do__done-input:hover + .to-do__done-custom-input::before,
+.to-do__done-input:hover + .to-do__done-custom-input::after {
   transform: scale(1.2);
 }
 
