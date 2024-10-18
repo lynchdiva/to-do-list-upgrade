@@ -141,8 +141,8 @@ body {
 }
 
 .to-do__done-label {
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
   position: relative;
   display: flex;
 
@@ -183,8 +183,8 @@ label:focus {
   z-index: 1;
   top: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
 
   background-image: url(../icons/not-done.svg);
   background-size: contain;
@@ -200,8 +200,8 @@ label:focus {
   z-index: 1;
   top: 0;
   left: 0;
-  width: 30px;
-  height: 30px;
+  width: 33px;
+  height: 33px;
 
   background-image: url(../icons/done.svg);
   background-size: contain;
@@ -214,13 +214,15 @@ label:focus {
   display: block;
 }
 
-.to-do__done-input:hover + .to-do__done-custom-input::before,
-.to-do__done-input:hover + .to-do__done-custom-input::after {
-  transform: scale(1.2);
-}
-
 .hidden {
   display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .to-do__done-input:hover + .to-do__done-custom-input::before,
+  .to-do__done-input:hover + .to-do__done-custom-input::after {
+    transform: scale(1.2);
+  }
 }
 
 @media screen and (max-width: 455px) {
