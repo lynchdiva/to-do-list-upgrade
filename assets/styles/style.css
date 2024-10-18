@@ -150,11 +150,19 @@ body {
   height: 30px;
 
   opacity: 0;
+  background-color: transparent;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+.to-do__done-input:focus,
+.to-do__done-input:active {
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
 }
 
 .to-do__done-input + .to-do__done-custom-input::before {
