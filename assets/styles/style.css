@@ -160,12 +160,14 @@ body {
 .to-do__done-input + .to-do__done-custom-input::before {
   content: '';
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 30px;
   height: 30px;
 
   background-image: url(../icons/not-done.svg);
+  background-color: white;
   background-size: contain;
   cursor: pointer;
 
