@@ -145,6 +145,18 @@ body {
   height: 30px;
   position: relative;
   display: flex;
+
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+label:active,
+label:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
 
 .to-do__done-input {
@@ -153,7 +165,16 @@ body {
 
   opacity: 0;
   background-color: transparent;
+  -webkit-appearance: none;
   appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.to-do__done-input:active,
+.to-do__done-input:focus {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
 
 .to-do__done-input + .to-do__done-custom-input::before {
