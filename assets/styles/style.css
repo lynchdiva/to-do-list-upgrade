@@ -150,6 +150,11 @@ body {
   height: 30px;
 
   opacity: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .to-do__done-input + .to-do__done-custom-input::before {
