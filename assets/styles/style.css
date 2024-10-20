@@ -141,10 +141,12 @@ body {
 }
 
 .to-do__done-label {
-  width: 33px;
-  height: 33px;
   position: relative;
   display: flex;
+  flex: none;
+  width: 33px;
+  height: 33px;
+  margin-left: 4px;
 
   background-color: transparent;
   -webkit-appearance: none;
@@ -190,7 +192,7 @@ label:focus {
   background-size: contain;
   cursor: pointer;
 
-  transition-duration: all 0s;
+  transition-duration: 0s;
 }
 
 .to-do__done-input + .to-do__done-custom-input::after {
@@ -207,7 +209,7 @@ label:focus {
   background-size: contain;
   cursor: pointer;
 
-  transition-duration: all 0s;
+  transition-duration: 0s;
 }
 
 .to-do__done-input:checked + .to-do__done-custom-input::after {
@@ -226,6 +228,9 @@ label:focus {
 }
 
 @media screen and (max-width: 455px) {
+  .to-do__list-container {
+    width: 94%;
+  }
   .to-do__input {
     display: block;
     width: 90%;
@@ -233,7 +238,6 @@ label:focus {
   }
 
   .to-do__list {
-    width: 90%;
     min-height: 250px;
     padding: 25px 25px;
   }
