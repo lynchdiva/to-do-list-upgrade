@@ -88,13 +88,9 @@ function changeClearButtonState(state) {
 
 function createTask(taskText, id) {
   const taskItem = document.createElement('li');
-  const taskSpan = document.createElement('span');
-
-  taskSpan.textContent = taskText;
-
-  taskItem.prepend(taskSpan);
 
   taskItem.classList.add('to-do__task');
+  taskItem.textContent = taskText;
 
   addTaskStatusIndicator(taskItem, id);
 
