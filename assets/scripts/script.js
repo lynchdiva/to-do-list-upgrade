@@ -52,8 +52,8 @@ function addTaskToList() {
 }
 
 function isEmptyList() {
-  const noTasksPlaceholder = document.querySelector('.to-do__no-tasks');
-  return !noTasksPlaceholder.classList.contains('hidden');
+  const toDoList = document.querySelector('.to-do__list');
+  return toDoList.children.length === 0;
 }
 
 function showList() {
